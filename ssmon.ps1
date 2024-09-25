@@ -12,7 +12,7 @@ j@jaromwest.com
 # Custom command to run when unhealthy drives are detected
 $customCommand = {
     Write-Host "Sending ntfy.sh alert that potential problems are detected..." -ForegroundColor Red
-    $uri = "https://ntfy.sh/boxjaromwestcom"
+    $uri = "https://ntfy.sh/myalerturl"
     $body = "WARNING: Possible problem with Storage Pool on server."
     Invoke-WebRequest -Method Post -Uri $uri -Body $body
     Write-Host "ntfy.sh notification sent!" -ForegroundColor Yellow
